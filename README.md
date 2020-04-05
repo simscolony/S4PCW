@@ -11,6 +11,8 @@ Decompiler ใน Python 3 ด้วย unpyc3
 ถอดโค้ด Python จากฟังก์ชั่นที่เรียกใช้งาน
 
 สามารถถอดได้ตามตัวอย่างต่อไปนี้
+
+```python
 >>> from unpyc3 import decompile
 >>> def foo(x, y, z=3, *args):
 ... global g
@@ -26,21 +28,22 @@ for i, j in zip(x, y):
 if z == i + j or args[i] == j:
 g = i, j
 return
-
+```
 ถอดโค้ด Python จากไฟล์ .pyc
 
 หากต้องการถอดโค้ด Python จากไฟล์ .pyc
 ให้วางไฟล์ unpyc3.py ไว้โฟลเดอร์เดียวกันกับไฟล์ .pyc ที่ต้องการ decompiler แล้วเปิดคอมมานด์ไลน์ ใช้คำสั่ง cd ไปยังโฟลเดอร์ที่เก็บไฟล์ที่ต้องการ decompiler
-
+```python
 >>> a = 'ชื่อไฟล์.pyc'
 >>> from unpyc3 import decompile
 >>> print(decompile(a))
-
+```
 ตัวอย่าง
+```python
 >>> a = 'hello.pyc'
 >>> from unpyc3 import decompile
 >>> print(decompile(a))
 print('Hello')
-
+```
 ติดตามบทความต่อไปนะครับ
 ขอบคุณครับ
